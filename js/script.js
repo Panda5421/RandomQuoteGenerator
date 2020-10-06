@@ -7,6 +7,10 @@ project 1 - A Random Quote Generator
   // Check the "Project Resources" section of the project instructions
   // Reach out in your Slack community - https://treehouse-fsjs-102.slack.com/app_redirect?channel=chit-chat
 
+
+//I am going for an 'Exceeds Expectations' grade, but will accept a pass if I 'Meet Expectations'.
+
+
 /*** 
  * `quotes` array 
  * Holds a list of quotes to be displayed.
@@ -45,7 +49,22 @@ function getRandomQuote() {
 
 
 /***
- * `printQuote` function'
+ * `getRandomColor` function
+ * Returns a random color
+ */
+function getRandomColor() {
+	const letters = '0123456789ABCDEF';
+	let color = '#';
+	for(let i = 0; i < 6; i++) {
+		let rand = Math.floor(Math.random()*letters.length);
+		color += letters[rand];
+	}
+	return color;
+}
+
+
+/***
+ * `printQuote` function
  * Displays a random quote on the webpage.
 ***/
 function printQuote() {
@@ -65,9 +84,17 @@ function printQuote() {
 	}
 	html += '</p>';
 
+	//Code from https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp
+	//Sets the background color of the div element the quote is in randomly.
+	document.getElementById('quote-box').style.backgroundColor = getRandomColor();
+
 	return document.getElementById('quote-box').innerHTML = html;
 }
 
+//Automatically refreshes quotes every 10 seconds.
+setInterval(function() {
+	printQuote();
+}, 10000);
 
 /***
  * click event listener for the print quote button
