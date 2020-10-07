@@ -106,11 +106,10 @@ function printQuote() {
 	html += '</p>';
 
 	//Code from https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp
-	//Sets the background color of the div element the quote is in randomly.
-	//let color = '#3ac162';
-	let color = document.querySelector('body').style.backgroundColor;
-	document.querySelector('body').style.backgroundColor = getRandomColor(color);
-	console.log(color);
+	//Sets the background color of the page randomly.
+	
+	document.querySelector('body').style.backgroundColor = getRandomColor();
+	
 	return document.getElementById('quote-box').innerHTML = html;
 }
 
