@@ -90,6 +90,12 @@ function getRandomColor(c) {
 ***/
 function printQuote() {
 	let randQuote = getRandomQuote();
+	let quote = document.getElementById('quote-box').querySelector('.quote').innerHTML;
+	
+	while(randQuote.quote === quote) {
+		randQuote = getRandomQuote();
+	}
+	
 	let html = `<p class="quote">${randQuote.quote}</p>
 				<p class="source">${randQuote.source}`;
 	if(randQuote.citation) {
