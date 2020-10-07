@@ -60,6 +60,24 @@ function getRandomColor() {
 		color += letters[rand];
 	}
 	return color;
+
+
+//Brainstorming how best to generate random color
+	// let colorVals = [0, 0, 0];
+	// for(let i=0; i<colorVals.length; i++) {
+	// 	colorVals[i] = Math.floor(Math.random()*256);
+	// }
+	// const color = `rgb(${colorVals[0]}, ${colorVals[1]}, ${colorVals[2]})`;
+	// return color;
+
+
+	// const colors = ['#216869', '#623cea', '#8edce6', '#294936', '#3fa7d6', '#037971', '#012a36'];
+	// // let color = colors[Math.floor(Math.random()*colors.length)];
+	// // while(c == color) {
+	// // 	color = 
+	// // }
+	// // console.log(color);
+	// return colors[Math.floor(Math.random()*colors.length)];
 }
 
 
@@ -86,6 +104,8 @@ function printQuote() {
 
 	//Code from https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp
 	//Sets the background color of the div element the quote is in randomly.
+	//let color = '#3ac162';
+
 	document.getElementById('quote-box').style.backgroundColor = getRandomColor();
 
 	return document.getElementById('quote-box').innerHTML = html;
