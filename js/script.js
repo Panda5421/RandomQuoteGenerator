@@ -56,13 +56,13 @@ function getRandomColor(c) {
 	
 	
 //Brainstorming how best to generate random color
-	// const letters = '0123456789ABCDEF';
-	// let color = '#';
-	// for(let i = 0; i < 6; i++) {
-	// 	let rand = Math.floor(Math.random()*letters.length);
-	// 	color += letters[rand];
-	// }
-	// return color;
+	const letters = '0123456789ABCDEF';
+	let color = '#';
+	for(let i = 0; i < 6; i++) {
+		let rand = Math.floor(Math.random()*letters.length);
+		color += letters[rand];
+	}
+	return color;
 
 
 	// let colorVals = [0, 0, 0];
@@ -73,14 +73,14 @@ function getRandomColor(c) {
 	// return color;
 
 
-	const colors = ['rgb(33, 104, 105)', 'rgb(98, 60, 234)', 'rgb(142, 220, 230)', 'rgb(41, 73, 54)', 'rgb(63, 167, 214)', 'rgb(3, 121, 113)', 'rgb(1, 42, 54)'];
-	let color = colors[Math.floor(Math.random()*colors.length)];
-	while(c === color) {
-		color = colors[Math.floor(Math.random()*colors.length)];
-	}
-	// console.log(color);
-	// console.log(c);
-	return color;
+	// const colors = ['rgb(33, 104, 105)', 'rgb(98, 60, 234)', 'rgb(142, 220, 230)', 'rgb(41, 73, 54)', 'rgb(63, 167, 214)', 'rgb(3, 121, 113)', 'rgb(1, 42, 54)'];
+	// let color = colors[Math.floor(Math.random()*colors.length)];
+	// while(c === color) {
+	// 	color = colors[Math.floor(Math.random()*colors.length)];
+	// }
+	// // console.log(color);
+	// // console.log(c);
+	// return color;
 }
 
 
@@ -108,9 +108,9 @@ function printQuote() {
 	//Code from https://www.w3schools.com/jsref/prop_style_backgroundcolor.asp
 	//Sets the background color of the div element the quote is in randomly.
 	//let color = '#3ac162';
-	let color = document.getElementById('quote-box').style.backgroundColor;
-	document.getElementById('quote-box').style.backgroundColor = getRandomColor(color);
-
+	let color = document.querySelector('body').style.backgroundColor;
+	document.querySelector('body').style.backgroundColor = getRandomColor(color);
+	console.log(color);
 	return document.getElementById('quote-box').innerHTML = html;
 }
 
