@@ -53,6 +53,9 @@ function getRandomQuote() {
  * Returns a random color
  */
 function getRandomColor(c) {
+	
+	
+//Brainstorming how best to generate random color
 	// const letters = '0123456789ABCDEF';
 	// let color = '#';
 	// for(let i = 0; i < 6; i++) {
@@ -62,7 +65,6 @@ function getRandomColor(c) {
 	// return color;
 
 
-//Brainstorming how best to generate random color
 	// let colorVals = [0, 0, 0];
 	// for(let i=0; i<colorVals.length; i++) {
 	// 	colorVals[i] = Math.floor(Math.random()*256);
@@ -76,8 +78,8 @@ function getRandomColor(c) {
 	while(c === color) {
 		color = colors[Math.floor(Math.random()*colors.length)];
 	}
-	console.log(color);
-	console.log(c);
+	// console.log(color);
+	// console.log(c);
 	return color;
 }
 
